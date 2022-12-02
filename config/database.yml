@@ -81,6 +81,5 @@ test:
 #
 production:
   <<: *default
-  database: myfilms_production
-  username: myfilms
-  password: <%= ENV["MYFILMS_DATABASE_PASSWORD"] %>
+  database: <%= ENV["DATABASE"] %>
+  password: <%= ENV["POSTGRES"] %>
