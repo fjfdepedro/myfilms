@@ -1,0 +1,27 @@
+<div id="<%= dom_id film %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= film.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Format:</strong>
+    <%= film.format %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Stored in:</strong>
+    <%= film.stored_in %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Url:</strong>
+    <%= film.url %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this film", film, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this film', edit_film_path(film), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
